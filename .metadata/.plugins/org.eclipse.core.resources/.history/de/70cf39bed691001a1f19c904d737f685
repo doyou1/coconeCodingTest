@@ -1,0 +1,13 @@
+package dptest0509;
+
+import java.util.Stack;
+
+public class DFS {
+	//Stack
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<>();
+		
+		//부모 노드를 빼서 출력
+		//자식 노드를 Stack push
+	}
+}

@@ -1,0 +1,34 @@
+package study0419;
+
+import java.util.Scanner;
+
+public class Solution1_1 {
+	Scanner sc = new Scanner(System.in);
+    String n = sc.nextLine();
+    String str = sc.nextLine();
+    
+    String[] arr = str.split(" ");
+	Arrays.sort(arr);
+	int[][] input = new int[Integer.parseInt(n) * Integer.parseInt(n)][2];
+	
+	int cnt = 0;
+	for(int i=0;i<Integer.parseInt(n);i++) {
+		for(int j=0;j<Integer.parseInt(n);j++) {
+			int x = Integer.parseInt(arr[i]);
+			int y = Integer.parseInt(arr[j]);
+			input[cnt] = new int[]{x,y};
+			cnt++;
+		}
+	}
+	
+    int sum = 0;
+    
+    for(int i=0;i<input.length;i++) {
+		int[] arr = input[i];
+		int x = arr[0];
+		int y = arr[1];
+		
+		sum += Math.abs(x-y);
+	}		
+	System.out.println(sum);
+}

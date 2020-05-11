@@ -1,0 +1,55 @@
+package cocone;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.TreeSet;
+
+public class DPSolution3 {
+	
+	public static void main(String[] args) {
+		DPSolution3 s1 = new DPSolution3();
+		
+		int N = 5;
+		
+		int answer = s1.solution(N);
+		System.out.println(answer);
+	}
+		
+	public int solution(int N) {	
+		int answer = 0;
+		
+		int[] arr = new int[N+1];
+		
+		answer = dfs(N, arr, N);
+		
+		return answer;
+	}
+	
+	public int dfs(int N, int[] arr, int max) {
+		if(N == 1 || N == 0) {
+			System.out.println("if(N == 1 || N == 0) {");
+			return arr[N] = 0;
+		}
+		else if(N == 2) {
+			System.out.println("else if(N == 2) {");
+			return arr[N] = 2;
+		}
+		else if(N == max) {
+			System.out.println("else if(N == max) {");
+			arr[N] = 3 * N;
+			return dfs(N-1, arr, max) + dfs(N-2, arr, max);
+		}
+		else if(arr[N] == 0 && N != 0 && N != 1 && N != 2) {
+			System.out.println("else if(arr[N] == 0 && N != 0 && N != 1 && N != 2) {");
+			arr[N] = 2 * N;
+			return dfs(N-1, arr, max) + dfs(N-2, arr, max);
+		}
+		
+		int sum = 0;
+		for(int x : arr) {
+			sum += x;
+		}
+		return sum;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package cocone;
+
+import java.io.BufferedReader;
+
+public class DynamicProgramming1 {
+
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	}
+}

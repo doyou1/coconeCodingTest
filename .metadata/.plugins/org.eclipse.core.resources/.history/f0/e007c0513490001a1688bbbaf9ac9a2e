@@ -1,0 +1,16 @@
+package vo;
+
+public class C extends B{
+
+	int b;
+	int c;
+	
+	public C(int A, int B) {
+		super(B, A);
+		System.out.println("super.b : " + super.b);
+		System.out.println("super.a : " + super.a);
+		this.b = super.b + B;
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package dptest0509;
+
+public class main0509 {
+
+	int[] arr;
+	
+	public static void main(String[] args) {
+		
+	}
+}

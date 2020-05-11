@@ -1,0 +1,29 @@
+package dptest0509;
+
+import java.util.LinkedList;
+import java.util.NoSuchElementException;
+import java.util.Stack;
+
+
+
+
+public class QueueTest0509 {
+
+	//Queue : 선입선출 FIFO
+	public static void main(String[] args) {
+		
+		Queue<Integer> q = new Queue<Integer>();
+		q.add(1);
+		q.add(2);
+		q.add(3);
+		q.add(4);
+		
+		System.out.println(q.remove());
+		System.out.println(q.remove());
+		System.out.println(q.peek());
+		System.out.println(q.remove());
+		System.out.println(q.isEmpty());
+		System.out.println(q.remove());
+		System.out.println(q.isEmpty());
+	}
+}

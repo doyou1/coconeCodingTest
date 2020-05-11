@@ -1,0 +1,21 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class DynamicProgramming3 {
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = Integer.valueOf(br.readLine());
+		
+		int[] tArr = new int[t];
+		for(int i=0;i<t;i++) {
+			tArr[i] = Integer.valueOf(br.readLine());
+		}
+		
+		int[] arr = new int[];
+	}
+	
+}

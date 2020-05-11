@@ -1,0 +1,18 @@
+package dptest0509;
+
+public class titling {
+	public static void main(String[] args) {
+		titling t = new titling();
+		int n = 5;
+		
+		int w = n;
+		int h = 2;
+		
+		t.dp(w, h);
+	}
+	
+	public int dp(int w, int h) {
+		
+		return 0;
+	}
+}

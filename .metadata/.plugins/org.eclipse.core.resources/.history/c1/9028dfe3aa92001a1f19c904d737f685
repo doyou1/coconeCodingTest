@@ -1,0 +1,33 @@
+package cocone;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.TreeSet;
+
+public class DPSolution3 {
+	
+	public static void main(String[] args) {
+		DPSolution3 s1 = new DPSolution3();
+		
+		int N = 5;
+		
+		long answer = s1.solution(N);
+	}
+		
+	public long solution(long N) {	
+		long answer = 0;
+		
+		long[] arr = new long[N+1];
+		
+		arr[1] = 1;
+		
+		for(long i=2; i < arr.length; i++) {
+			arr[i] = arr[i-1] + arr[i-2];
+			System.out.prlongln("arr["+i+"] : " + arr[i]);
+		}
+		
+		answer = arr[N] * 4 + arr[N-1] * 2;
+			
+		return answer;
+	}
+}

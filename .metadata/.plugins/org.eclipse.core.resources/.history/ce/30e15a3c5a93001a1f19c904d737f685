@@ -1,0 +1,62 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.StringTokenizer;
+
+public class GreedTest11 {
+
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		int N = Integer.valueOf(st.nextToken());
+		int M = Integer.valueOf(st.nextToken());
+		
+		int[][] arr = new int[M][2];
+		for(int i=0;i<M;i++) {
+			st = new StringTokenizer(br.readLine(), " ");
+			
+			//6개 패키지 가격
+			arr[i][0] = Integer.valueOf(st.nextToken());
+			//1개 낱개 가격
+			arr[i][1] = Integer.valueOf(st.nextToken());
+		}
+		int result = 0;
+		
+		if(N/6 > 0) {
+			int low0 = arr[0][0];
+			int low1 = arr[0][1];
+			
+			for(int[] temp : arr) {
+				if(low0 > temp[0]) {
+					low0 = temp[0];
+				}
+				if(low1 > temp[1]) {
+					low1 = temp[1];
+				}
+			}
+			
+			result = (N/6) * low0 + (N%6) * low1;
+			
+		}else {
+			result = N * arr[0][1];
+			for(int[] temp : arr) {
+				
+				if(result > temp[0]) {
+					result = temp[0];
+				}else if(result > N * temp[1]) {
+					result = N * temp[1];
+				}
+			}
+		}
+		
+		System.out.println(result);
+	}
+	
+}

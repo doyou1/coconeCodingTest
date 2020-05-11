@@ -1,0 +1,12 @@
+package vo;
+
+public class GugudanTest {
+
+	
+	public static void main(String[] args) {
+		
+		
+		int[][] sum = new int[9][2];
+		
+	}
+}

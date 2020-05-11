@@ -1,0 +1,21 @@
+package cocone;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class GraphSolution2 {
+
+	public static void main(String[] args) {
+		int n = 5;
+		int[][] results = {{4,3},{4,2},{3,2},{1,2},{2,5}};
+		
+	}
+	
+	public int solution(int n, int[][] results) {
+		int answer = 0;
+		
+		
+		
+		return answer;
+	}	
+}

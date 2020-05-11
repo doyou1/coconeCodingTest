@@ -1,0 +1,28 @@
+package vo;
+
+public class B extends A{
+
+	int b;
+	int c;
+	
+	public B(int A, int B) {
+		super();//Super Class의 생성자 호출
+		//기본 생성자 호출, 초기화가 된 상태로 만듬, int는 0
+		//this.b : B.b 
+		//b		: A.b
+		//a : 10
+		System.out.println(super.a);// 0a
+
+		
+		
+		System.out.println("a : " + a);
+		System.out.println(this.a);
+		System.out.println(super.a);
+		System.out.println(a);
+		System.out.println("b : " + b);
+		//파라미터랑 
+		System.out.println("A : "  + A);
+		b = A + B;
+		c = a + super.b + 10;
+	}
+}

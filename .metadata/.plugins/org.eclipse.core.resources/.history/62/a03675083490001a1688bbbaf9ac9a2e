@@ -1,0 +1,10 @@
+package vo;
+
+public class C extends B{
+
+	public C(int A, int B) {
+		super(A, B);
+		
+	}
+
+}

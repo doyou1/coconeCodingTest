@@ -1,0 +1,64 @@
+package cocone;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.TreeSet;
+
+public class DPSolution4 {
+	
+	public static void main(String[] args) {
+		DPSolution4 s1 = new DPSolution4();
+		
+		int[][] triangle = {{7},{3,8},{8,1,0},{2,7,4,4},{4,5,2,6,5}};
+		
+		long answer = s1.solution(triangle);
+	}
+		
+	public long solution(int[][] triangle) {	
+		int answer = 0;
+		
+		int[][] sum = new int[triangle.length+1][triangle.length+1];
+		boolean[][] check = new boolean[triangle.length+1][triangle.length+1];
+		
+		for(int i = 0; i < triangle.length; i++) {
+			int s = triangle[0][0];
+			for(int j = 0; j < triangle[i].length; j++) {
+				s += triangle[j][i];
+			}
+			System.out.println(s);
+		}
+		//00 10 20 30 40
+		
+		
+		
+		answer = max;
+		return answer;
+	}
+	
+	static int max = 0;
+	
+	public void dfs(int[][] triangle, int[][] sum, boolean[][] check, int h) {
+		
+		if(triangle.length == h) {
+			
+			int[] sums = sum[triangle.length];
+			
+			for(int s : sums) {
+				if(s > max) {
+					max = s;
+				}
+			}
+			
+			return;
+		}
+		boolean[] c = check[h];
+		for(int i = 0; i < check.length; i++) {
+			if(c[i] == false) {
+				c[i] = true;
+				
+				
+			}
+		}
+	}
+	
+}

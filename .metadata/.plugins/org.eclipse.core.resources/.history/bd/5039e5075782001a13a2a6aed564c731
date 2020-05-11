@@ -1,0 +1,75 @@
+package study0419;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Solution1_1 {
+
+	public static void main(String[] args) {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+	    String n = br.readLine();
+	    StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		String[] arr = null;
+        while(st.hasMoreTokens()) {
+				
+			arr	 = st.nextToken();
+		}
+		Arrays.sort(arr);
+		int[][] input = new int[Integer.parseInt(n) * Integer.parseInt(n)][2];
+		
+		int cnt = 0;
+		for(int i=0;i<Integer.parseInt(n);i++) {
+			for(int j=0;j<Integer.parseInt(n);j++) {
+				int x = Integer.parseInt(arr[i]);
+				int y = Integer.parseInt(arr[j]);
+				input[cnt] = new int[]{x,y};
+				cnt++;
+			}
+		}
+		
+	    int sum = 0;
+	    
+	    for(int i=0;i<input.length;i++) {
+			int[] a = input[i];
+			int x = a[0];
+			int y = a[1];
+			
+			sum += Math.abs(x-y);
+		}		
+		System.out.println(sum);
+		
+		/*Scanner sc = new Scanner(System.in);
+	    String n = sc.nextLine();
+	    String str = sc.nextLine();
+	    
+	    String[] arr = str.split(" ");
+		Arrays.sort(arr);
+		int[][] input = new int[Integer.parseInt(n) * Integer.parseInt(n)][2];
+		
+		int cnt = 0;
+		for(int i=0;i<Integer.parseInt(n);i++) {
+			for(int j=0;j<Integer.parseInt(n);j++) {
+				int x = Integer.parseInt(arr[i]);
+				int y = Integer.parseInt(arr[j]);
+				input[cnt] = new int[]{x,y};
+				cnt++;
+			}
+		}
+		
+	    int sum = 0;
+	    
+	    for(int i=0;i<input.length;i++) {
+			int[] a = input[i];
+			int x = a[0];
+			int y = a[1];
+			
+			sum += Math.abs(x-y);
+		}		
+		System.out.println(sum);
+*/
+	}
+}

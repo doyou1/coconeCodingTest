@@ -1,0 +1,20 @@
+package dptest0509;
+
+public class main0509 {
+
+	int[] arr;
+	
+	public static void main(String[] args) {
+		
+		int x = 50;
+		
+		
+		System.out.println();
+	}
+	
+	public int[] dp(int x) {
+		if()
+			
+		return arr;
+	}
+}

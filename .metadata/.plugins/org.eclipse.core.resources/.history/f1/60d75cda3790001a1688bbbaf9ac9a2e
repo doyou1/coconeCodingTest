@@ -1,0 +1,10 @@
+package vo;
+
+public class mainclass {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println(new B(10,12).c);
+	}
+}

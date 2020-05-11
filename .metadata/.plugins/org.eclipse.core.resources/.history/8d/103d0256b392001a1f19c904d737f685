@@ -1,0 +1,28 @@
+package cocone;
+
+import java.util.ArrayList;
+
+public class DPSolution4 {
+	
+	public static void main(String[] args) {
+		DPSolution4 s1 = new DPSolution4();
+		
+		int[][] triangle = {{7},{3,8},{8,1,0},{2,7,4,4},{4,5,2,6,5}};
+		
+		int answer = s1.solution(triangle);
+	}
+		
+	public int solution(int[][] triangle) {	
+		int answer = 0;
+		
+		for(int i=triangle.length-2;i>=0;i--) {
+			
+		}
+	
+		return answer;
+	}
+	
+	
+	
+	
+}

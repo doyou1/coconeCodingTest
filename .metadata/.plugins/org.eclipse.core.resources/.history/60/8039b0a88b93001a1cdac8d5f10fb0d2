@@ -1,0 +1,26 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class DynamicProgramming1 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int X = Integer.valueOf(br.readLine());
+		
+		int cnt=0;
+		while(X > 1) {
+		
+			if(X%3 == 0) {
+				X = X/3;
+				cnt++;
+				continue;
+			}else if(X%2 == 0) {
+				X = X/2;
+				
+			}
+		}
+	}
+}
