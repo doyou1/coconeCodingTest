@@ -1,8 +1,0 @@
-package cocone;
-
-public class DynamicProgramming1 {
-
-	public static void main(String[] args) {
-		
-	}
-}
