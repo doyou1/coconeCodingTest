@@ -1,0 +1,35 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Graph3 {
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int n = Integer.valueOf(br.readLine());
+		
+		int[] arr = new int[n+1];
+		
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		
+		ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+		
+		ArrayList<Integer> temp = new ArrayList<>();
+		
+		int check = -1;
+		for(int i=1;i<n+1;i++) {
+			a = Integer.valueOf(st.nextToken());
+			
+			if(check != a) {
+				
+			}
+		}
+		
+		
+	}
+}

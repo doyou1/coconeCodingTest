@@ -1,0 +1,10 @@
+package cocone;
+
+public class Graph3 {
+	
+	public static void main(String[] args) {
+		int a = 10000001;
+		
+		System.out.println(a + a);
+	}
+}

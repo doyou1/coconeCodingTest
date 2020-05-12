@@ -1,0 +1,51 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+class Bus{
+	int x;
+	LinkedList<Bus> y;
+	int price;
+	
+	Bus(int x, int y, int price){
+		this.x = x;
+		this.y = y;
+		this.price = price;
+	}
+}
+
+public class Graph2 {
+	
+	static int n;
+	static int m;
+	static int[][] nArr;
+	static int[][] mArr;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		n = Integer.valueOf(br.readLine());
+		m = Integer.valueOf(br.readLine());
+		
+		nArr = new int[n][n];
+		mArr = new int[m][3];
+		
+		for(int i=0;i<m;i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			mArr[i][0] = Integer.valueOf(st.nextToken());
+			mArr[i][1] = Integer.valueOf(st.nextToken());
+			mArr[i][2] = Integer.valueOf(st.nextToken());
+		}
+				
+		dfs();
+	}
+	
+	static void dfs() {
+		
+	}
+	
+}

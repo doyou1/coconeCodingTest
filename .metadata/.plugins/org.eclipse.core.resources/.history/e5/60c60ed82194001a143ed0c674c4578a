@@ -1,0 +1,62 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+class Bus{
+	int x;
+	ArrayList<Integer> yS;
+	ArrayList<Integer> priceS;
+	
+	
+	Bus(int x){
+		this.x = x;
+		this.yS = new ArrayList<Integer>();
+		this.priceS = new ArrayList<Integer>();
+	}
+	
+	public void addYandPrice(int y, int price) {
+		this.yS.add(y);
+		this.priceS.add(price);
+	}
+}
+
+public class Graph2 {
+	
+	static int n;
+	static int m;
+	static int[][] nArr;
+	static int[][] mArr;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		n = Integer.valueOf(br.readLine());
+		m = Integer.valueOf(br.readLine());
+		
+		nArr = new int[n][n];
+		mArr = new int[m][3];
+		
+		for(int i=0;i<m;i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			mArr[i][0] = Integer.valueOf(st.nextToken());
+			mArr[i][1] = Integer.valueOf(st.nextToken());
+			mArr[i][2] = Integer.valueOf(st.nextToken());
+		}
+				
+		
+		for(int i=0;i<m;i++) {
+			int[] temp = mArr[i];
+			
+		}
+	}
+	
+	static void dfs() {
+		
+	}
+	
+}

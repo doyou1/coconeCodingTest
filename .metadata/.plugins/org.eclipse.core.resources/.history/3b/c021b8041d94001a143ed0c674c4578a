@@ -1,0 +1,15 @@
+package cocone;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+
+public class Graph2 {
+	
+	public static void main(String[] args){
+
+	
+	}
+	
+}

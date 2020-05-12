@@ -1,0 +1,98 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class Graph2 {
+	
+	static int n;
+	static int m;
+	static int[][] nArr;
+	static int[][] mArr;
+	static HashMap<Integer,Object> map;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		n = Integer.valueOf(br.readLine());
+		m = Integer.valueOf(br.readLine());
+		
+		nArr = new int[n][n];
+		mArr = new int[m][3];
+		
+		int[][] distances = new int[n][n];
+		
+		for(int i=0;i<m;i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			mArr[i][0] = Integer.valueOf(st.nextToken());
+			mArr[i][1] = Integer.valueOf(st.nextToken());
+			mArr[i][2] = Integer.valueOf(st.nextToken());
+			
+			distances[mArr[i][0]][mArr[i][1]] = mArr[i][2];
+		}
+				
+		map = new HashMap<>();
+		
+		for(int i=0;i<m;i++) {
+			int[] temp = mArr[i];
+			
+			Bus bus = (Bus) map.get(temp[0]);
+			
+			if(bus != null) {
+				bus.addYandPrice(temp[1], temp[2]);
+				map.put(temp[0],bus);
+			}else {
+				Bus b = new Bus(temp[0]);
+				b.addYandPrice(temp[1], temp[2]);
+				map.put(temp[0],b);	
+			}
+		}
+	
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=n;j++) {
+				//i : 출발도시, j : 도착도시
+				price = 0;
+				Bus bus = (Bus) map.get(i);
+				ti = i;
+				tj = j;
+				price = dfs(i,j,bus,price);
+				System.out.print(price + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	static int dfs(int i, int j, Bus bus, int price) {
+		
+		if(j == ti) {
+			return price;
+		}
+		
+		ArrayList<Integer> yS = bus.yS;
+		ArrayList<Integer> priceS = bus.priceS;
+		
+		for(int x=0;x<yS.size();x++) {
+			if(yS.get(x) != 0) {
+				if(j == yS.get(x)) {
+					System.out.println("priceS.get(x)" + priceS.get(x));
+					price += priceS.get(x);
+					return price;
+				}				
+			}
+		}
+		
+		for(int x=0;x<yS.size();x++) {
+			price += priceS.get(x);
+			dfs(yS.get(x), j, (Bus) map.get(yS.get(x)), price);
+		}
+		
+		return 0;
+	}
+	
+}
