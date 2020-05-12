@@ -1,0 +1,52 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Graph4 {
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int dN = Integer.valueOf(br.readLine());
+		int lN = Integer.valueOf(br.readLine());
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		boolean[][] array = new boolean[dN+1][dN+1];
+		boolean[] checks = new boolean[dN+1];
+		checks[1] = true;
+		
+		int result = 0;
+		StringTokenizer st;
+		for(int i=0; i<lN; i++) {
+			st = new StringTokenizer(br.readLine(), " ");
+			
+			int x = Integer.valueOf(st.nextToken());
+			int y = Integer.valueOf(st.nextToken());
+			
+			if(x == 1) {
+				list.add(y);
+				result++;
+				checks[y] = true;
+			}
+			
+			array[x][y] = true;
+			array[y][x] = true;
+
+		}
+
+		for(int F : list) {
+			
+			for(int i=2; i<dN+1;i++) {
+				if(array[F][i] && !checks[i]) {
+					result++;
+					
+				}
+			}
+		}
+		
+	}
+}
