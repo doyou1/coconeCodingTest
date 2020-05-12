@@ -1,0 +1,30 @@
+package cocone;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class DynamicProgramming5 {
+		
+	static int result;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.valueOf(br.readLine());
+		
+		int[][] arr = new int[N][3];
+		boolean[] check = new boolean[N];
+		
+		for(int i=0; i<N; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			
+			arr[i][0] = Integer.valueOf(st.nextToken());
+			arr[i][1] = Integer.valueOf(st.nextToken());
+			arr[i][2] = Integer.valueOf(st.nextToken());
+		}
+		
+		dp(arr, check);
+	}	
+	
+}
