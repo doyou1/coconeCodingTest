@@ -20,6 +20,7 @@ public class DPSolution1 {
 	TreeSet<Integer>[] dynamic;
 	
 	public TreeSet<Integer> solve(int n) {
+
 		if(
 			(dynamic[n] != null) 
 			&&
@@ -32,6 +33,7 @@ public class DPSolution1 {
 		for(int i=0;i<n;i++) {
 			num = 10 * num + N_glb;
 		}
+
 		TreeSet<Integer> temp = new TreeSet<>();
 		temp.add(num);
 		

@@ -28,6 +28,7 @@ public class GreedTest2 {
 		int cnt = 0;
 		
 		for(int i=limit_i; i >=0;i--) {
+			
 			int money = arr[i];
 			int how = K / money;
 			cnt += how;

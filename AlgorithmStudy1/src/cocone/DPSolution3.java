@@ -6,12 +6,16 @@ import java.util.TreeSet;
 
 public class DPSolution3 {
 	
+	//깊이우선탐색 : 순서가 있다. 
+	//문제를 쪼개고
 	public static void main(String[] args) {
+		
 		DPSolution3 s1 = new DPSolution3();
 		
-		int N = 5;
+		int N = 10;
 		
 		long answer = s1.solution(N);
+		System.out.println(answer);
 	}
 		
 	public long solution(int N) {	

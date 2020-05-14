@@ -19,6 +19,7 @@ public class DynamicProgramming1_2 {
 				arr[i] = Math.min(arr[i],arr[i/2]+1);
 			}
 			if(i % 3 == 0) {
+
 				arr[i] = Math.min(arr[i],arr[i/3]+1);
 			}
 		}

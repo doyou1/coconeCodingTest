@@ -35,18 +35,20 @@ public class GreedTest12_1 {
 		if(index == n+1) {
 			answers.add(answer);
 			return;
-		}
-		
+		}		
 				
-			for(int i=0; i<10;i++) {
-				if(check[i]) continue;
-				else if(index == 0 || ck(answer.charAt(index-1), Character.toChars(i)[0], a[index -1])) {
-					check[i] = true;
-					go(index+1, answer + i);
-					check[i] = false;
-				}
-				
+		for(int i=0; i<10;i++) {
+			if(check[i]) continue;
+			else if(index == 0 || 
+					ck(answer.charAt(index-1)
+							, Character.toChars(i)[0]
+							, a[index -1])) {
+				//중복값 제거를 위해
+				check[i] = true;
+				go(index+1, answer + i);
+				check[i] = false;
 			}
+		}
 		
 	}
 	
