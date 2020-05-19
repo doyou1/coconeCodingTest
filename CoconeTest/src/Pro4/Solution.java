@@ -34,7 +34,6 @@ class Solution {
                     check = true;
                 }
 
-
                 if(check && x != n-1 && y != 0 && count <= total) {
                     arr[--y][++x] = count++;
                 }
